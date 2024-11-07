@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="form-section">
+            <h2>Resume Builder Form</h2>
+            <form id="resumeForm">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Education</legend>
+                    <div id="educationFields">
+                        <div class="education-entry">
+                            <div class="form-group">
+                                <label for="degree">Degree *</label>
+                                <input type="text" name="degree" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="school">School *</label>
+                                <input type="text" name="school" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gradYear">Graduation Year *</label>
+                                <input type="number" name="gradYear" required>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="addEducation">Add More Education</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Work Experience</legend>
+                    <div id="experienceFields">
+                        <div class="experience-entry">
+                            <div class="form-group">
+                                <label for="company">Company *</label>
+                                <input type="text" name="company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="position">Position *</label>
+                                <input type="text" name="position" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="duration">Duration *</label>
+                                <input type="text" name="duration" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="responsibilities">Responsibilities *</label>
+                                <textarea name="responsibilities" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" id="addExperience">Add More Experience</button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Skills</legend>
+                    <div class="form-group">
+                        <label for="skills">Skills (comma-separated) *</label>
+                        <textarea id="skills" name="skills" required></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+
+        <div class="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="resumeOutput">
+                <!-- Dynamic resume content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="edit.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+
+</body>
+
+</html>
